@@ -1,0 +1,15 @@
+<script>
+    let number = 10369;
+
+    // String variant
+    first_result = number.toString().split('').join(' ');
+    console.log(`The first result: ${first_result}`);
+
+    // Number variant
+    let second_result = Math.floor(number / 10000) + " ";
+    second_result +=  Math.floor(number / 1000) % 10 + " ";
+    second_result +=  Math.floor(number / 100) % 10 + " ";
+    second_result +=  Math.floor(number / 10) % 10 + " ";
+    second_result +=  number % 10 + " ";
+    console.log(`The second result: ${second_result}`);
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 4.2</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  while (true)
+  {
+    userNumber = parseInt(prompt("Введіть число "));
+    if (isNaN(userNumber))
+    {
+      alert("Що за дурницю ти написав? 🤨");
+    }
+    else if (userNumber.toString().length !== 3)
+    {
+      alert("Цифр має бути 3!!! 😡");
+    }
+    else
+    {
+      first_num = Math.floor(userNumber / 100);
+      second_num = Math.floor(userNumber / 10) % 10;
+      third_num = userNumber % 10;
+
+      if (first_num === second_num && first_num === third_num)
+      {
+        alert("Всі цифри однакові! 🥳");
+      }
+      else if (first_num === second_num || first_num === third_num || second_num === third_num)
+      {
+        alert("У числі дві однакові цифри! 🫡");
+      }
+      else
+      {
+        alert("Усі цифри різні. 😭");
+      }
+    }
+  }
+</script>

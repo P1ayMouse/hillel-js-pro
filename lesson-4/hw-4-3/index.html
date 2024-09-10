@@ -10,6 +10,7 @@
 </html>
 
 <script>
+    let result = "";
     year = parseInt(prompt("Вкажіть Ваш рік народження."));
     let age;
     if (isNaN(year))
@@ -19,6 +20,7 @@
     else
     {
         age = 2024 - year;
+        result += `Ваш вік: ${age}`
     }
 
     city = prompt("Вкажіть місто проживання.");
@@ -44,26 +46,18 @@
         }
     }
 
-    if (!age && city)
+    if (country)
     {
-        alert(`Ти живеш у столиці ${country}.`);
+        result += `\nТи живеш у столиці ${country}.`
     }
-    else if (age && !city)
+    else if (city)
     {
-        alert(`Ваш вік: ${age}`);
+        result += `\nТи живеш у місті ${city}`;
     }
-    else if (!age && !city)
+
+    if (result)
     {
-        alert(`На жаль, Ви не ввели вік та місто.`);
-    }
-    else if (country != null)
-    {
-        console.log(country)
-        alert(`Ваш вік: ${age}\nТи живеш у столиці ${country}.`);
-    }
-    else
-    {
-        alert(`Ваш вік: ${age}\nТи живеш у місті ${city}.`);
+        alert(result)
     }
 
     sport = prompt("Вкажіть улюблений вид спорту.");

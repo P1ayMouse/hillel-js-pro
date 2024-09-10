@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    let result = "";
+    year = parseInt(prompt("Вкажіть Ваш рік народження."));
+    let age;
+    if (isNaN(year))
+    {
+      alert("Шкода, що Ви не захотіли ввести свій рік народження.");
+    }
+    else
+    {
+        age = 2024 - year;
+        result += `Ваш вік: ${age}`
+    }
+
+    city = prompt("Вкажіть місто проживання.");
+    let country;
+
+    if (city === null || city.trim() === "")
+    {
+        alert("Шкода, що Ви не захотіли ввести своє місто.");
+    }
+    else
+    {
+        switch (city)
+        {
+            case "Київ":
+                country = 'України';
+                break;
+            case "Вашингтон":
+                country ='Сполучених Штатів Америки';
+                break;
+            case "Лондон":
+                country = 'Великобританії';
+                break;
+        }
+    }
+
+    if (country)
+    {
+        result += `\nТи живеш у столиці ${country}.`
+    }
+    else if (city)
+    {
+        result += `\nТи живеш у місті ${city}`;
+    }
+
+    if (result)
+    {
+        alert(result)
+    }
+
+    sport = prompt("Вкажіть улюблений вид спорту.");
+    if (sport === null || sport.trim() === "")
+    {
+        alert("Шкода, що Ви не захотіли ввести свій улюблений вид спорту.");
+    }
+    else
+    {
+        switch (sport)
+        {
+            case "Футбол":
+                alert('Круто! Хочеш стати Ліонелем Мессі?');
+                break;
+            case "Баскетбол":
+                alert('Круто! Хочеш стати Майклом Джорданом?');
+                break;
+            case "Бокс":
+                alert('Круто! Хочеш стати Олександром Усиком?');
+                break;
+        }
+    }
+</script>

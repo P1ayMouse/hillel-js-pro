@@ -1,0 +1,70 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+textarea{
+    resize: vertical;
+    min-height: 130px;
+    max-height: 300px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #969095;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+form {
+    border-radius: 10px;
+    background-color: #f3f3f8;
+    padding: 5px 20px 20px 20px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+button {
+    width: 95%;
+    height: 60px;
+    background-color: #24a2fd;
+    box-shadow: 0 0 15px #24a2fd;
+    color: white;
+    padding: 14px 20px;
+    margin: 20px 0 15px 15px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: inherit;
+}
+
+p {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #b7bcc7;
+}
+
+h2 {
+    color: #ee5d73;
+    font-size: 35px;
+}
+
+.error {
+    color: #df5555;
+    margin-left: 15px;
+    font-size: 12px;
+}

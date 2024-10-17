@@ -9,12 +9,16 @@ addNewButton.addEventListener('click', () => {
 
         newElement.textContent = addNewInput.value + " ";
         deleteButton.textContent = 'Видалити';
+        deleteButton.classList.add('listElementDelete');
         newElement.appendChild(deleteButton);
         elementsList.appendChild(newElement);
 
-        deleteButton.addEventListener('click', (e) => {
-            e.target.parentNode.remove();
-        })
         addNewInput.value = '';
+    }
+})
+
+elementsList.addEventListener('click', (e) => {
+    if (e.target.classList.contains('listElementDelete')) {
+        e.target.parentNode.remove();
     }
 })

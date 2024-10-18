@@ -11,7 +11,6 @@ leftArrowUsage(actualSlide);
 function dotsRender(activeDot) {
     dotsContainer.innerHTML = '';
     if (slides.length <= 1){
-        console.log("test");
         return
     }
 

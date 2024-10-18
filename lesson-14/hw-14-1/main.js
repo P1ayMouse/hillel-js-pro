@@ -2,11 +2,18 @@ let slides = document.querySelectorAll('.slide');
 let leftArrow = document.getElementById('arrow-left');
 let rightArrow = document.getElementById('arrow-right');
 let dotsContainer = document.getElementById('dots-container');
+let actualSlide = 0;
 
-addDots(0);
+dotsRender(actualSlide);
+rightArrowUsage(actualSlide);
+leftArrowUsage(actualSlide);
 
-function addDots(activeDot) {
+function dotsRender(activeDot) {
     dotsContainer.innerHTML = '';
+    if (slides.length <= 1){
+        console.log("test");
+        return
+    }
 
     for (let i = 0; i < slides.length; i++) {
         let span = document.createElement("span")
@@ -29,7 +36,7 @@ function leftArrowUsage(slide) {
 }
 
 function rightArrowUsage(slide) {
-    if (slides.length === slide) {
+    if (slides.length - 1 === slide) {
         rightArrow.classList.remove('active');
     }
     else {
@@ -44,6 +51,7 @@ function slideChanger(slide) {
         }
 
         if (i === slide) {
+            actualSlide = i;
             slides[i].classList.add('active');
         }
     }
@@ -51,47 +59,30 @@ function slideChanger(slide) {
 
 dotsContainer.addEventListener('click', (e) => {
     const targetId = +e.target.dataset.id;
-    addDots(targetId);
+    dotsRender(targetId);
     leftArrowUsage(targetId);
-    rightArrowUsage(targetId+1);
+    rightArrowUsage(targetId);
     slideChanger(targetId);
+    actualSlide = targetId;
 });
 
 rightArrow.addEventListener('click', () => {
     if (rightArrow.classList.contains('active')) {
-        for (let slideId in slides)
-        {
-            if (slides[slideId].classList.contains('active')) {
-                slides[slideId].classList.remove('active');
-                slides[+slideId+1].classList.add('active');
-                leftArrow.classList.add('active');
-
-                addDots(+slideId+1);
-
-                rightArrowUsage(+slideId+2);
-
-                break;
-            }
-        }
+        leftArrow.classList.add('active');
+        actualSlide += 1;
+        slideChanger(actualSlide)
+        dotsRender(actualSlide);
+        rightArrowUsage(actualSlide);
     }
 })
 
 leftArrow.addEventListener('click', () => {
     if (leftArrow.classList.contains('active')) {
-        for (let slideId in slides)
-        {
-            if (slides[slideId].classList.contains('active')) {
-                slides[slideId].classList.remove('active');
-                slides[+slideId-1].classList.add('active');
-                rightArrow.classList.add('active');
-
-                addDots(+slideId-1);
-
-                leftArrowUsage(+slideId-1)
-
-                break;
-            }
-        }
+        rightArrow.classList.add('active');
+        actualSlide -= 1;
+        slideChanger(actualSlide)
+        dotsRender(actualSlide);
+        leftArrowUsage(actualSlide);
     }
 })
 

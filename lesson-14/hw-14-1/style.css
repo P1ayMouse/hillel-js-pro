@@ -1,0 +1,110 @@
+.content-text {
+    grid-row: auto;
+    background-color: #f3f3f8;
+    width: 80%;
+    border-radius: 0 10px 10px 0;
+}
+
+#slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.slide {
+    display: none;
+    width: 1080px;
+    height: 300px;
+    margin: auto;
+    transform: inherit;
+}
+
+.slide.active {
+    display: flex;
+}
+
+.person-img {
+    width: 300px;
+    border-radius: 10px 0 0 10px;
+    object-fit: cover;
+}
+
+.team-text {
+    font-family: 'Open Sans', sans-serif;
+    color: #2fa3fd;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 20px 0 0 10px;
+    cursor: pointer;
+}
+
+.describe-text {
+    font-family: 'Open Sans', sans-serif;
+    color: #ee1459;
+    font-weight: bolder;
+    font-size: 34px;
+    margin: 10px;
+}
+
+.person-name {
+    font-family: 'Open Sans', sans-serif;
+    color: #afadb4;
+    font-weight: bolder;
+    font-size: 14px;
+    margin: 10px;
+    padding-top: 10px;
+}
+
+.person-position {
+    font-family: 'Open Sans', sans-serif;
+    color: #c3c3cd;
+    font-size: 14px;
+    margin: 10px;
+}
+
+.disable {
+    display: none;
+}
+
+.arrow-icon {
+    margin: 40px;
+    width: 60px;
+}
+
+.arrow-left {
+    content:url(./icons/left-arrow.png);
+}
+
+.arrow-left.active {
+    content:url(./icons/active-left-arrow.png);
+    cursor: pointer;
+}
+
+.arrow-right {
+    content:url(./icons/right-arrow.png);
+}
+
+.arrow-right.active {
+    content:url(./icons/active-right-arrow.png);
+    cursor: pointer;
+}
+
+#dots-container {
+    position: absolute;
+    bottom: -125px;
+}
+
+.dot.active {
+    content:url(./icons/active-dot.png);
+    cursor: default;
+}
+
+.dot {
+    width: 40px;
+    cursor: pointer;
+    content:url(./icons/dot.png);
+}

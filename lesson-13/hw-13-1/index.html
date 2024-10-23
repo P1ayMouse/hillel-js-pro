@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 13.1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form id="helpForm">
+    <h2>
+        We would like to help you
+    </h2>
+    <input type="text" id="name" name="name" placeholder="Name">
+    <div class="error" id="nameError"></div>
+
+    <textarea id="message" name="message" rows="4" cols="30" placeholder="Message"></textarea>
+    <div class="error" id="messageError"></div>
+
+    <p>How to answer you?</p>
+
+    <input type="tel" id="phone" name="phone" placeholder="Phone number" value="+380">
+    <div class="error" id="phoneError"></div>
+
+    <input type="email" id="email" name="email" placeholder="Email">
+    <div class="error" id="emailError"></div>
+
+    <button type="submit">
+        Send message
+    </button>
+</form>
+<script src="main.js"></script>
+</body>
+</html>

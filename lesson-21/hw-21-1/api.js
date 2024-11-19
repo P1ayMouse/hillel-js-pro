@@ -23,7 +23,7 @@ export const getPosts = () => {
 };
 
 export const createPost = (title, body) => {
-     fetch(apiUrl + '/posts', {
+     return fetch(apiUrl + '/posts', {
         method: 'POST',
         headers: {
             "Content-Type": "application/json"

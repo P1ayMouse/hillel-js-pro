@@ -1,0 +1,130 @@
+#cardsList ul {
+  list-style-type: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  background-color: rgba(210, 205, 208, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  border-radius: 8px;
+}
+
+#cardsList ul li {
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+#cardsList ul li:hover {
+  transform: scale(1.05);
+}
+
+#cardsList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.cardTitle {
+  font-weight: bold;
+}
+
+.commentBtn {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+}
+
+.commentBtn:hover {
+  background-color: #0056b3;
+}
+
+#submitBtn {
+  padding: 10px 20px;
+  background-color: #309c2b;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.commentBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.commentBtn:hover {
+  background-color: #0056b3;
+}
+
+.commentContainer {
+  margin-top: 15px;
+  padding: 10px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.comment {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.commentName {
+  font-weight: bold;
+  color: #333;
+}
+
+.commentEmail {
+  font-size: 14px;
+  color: #666;
+}
+
+.commentBody {
+  font-size: 15px;
+  color: #444;
+}

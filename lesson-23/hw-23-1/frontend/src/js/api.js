@@ -1,56 +1,55 @@
-import {renderBooks} from "./dom.js";
+import {renderTasks} from "./dom.js";
 
-export const getBooks = async (apiUrl) => {
-    const response = await fetch(`${apiUrl}/books`);
-    const books = await response.json();
-    renderBooks(books);
+const apiUrl = 'http://localhost:3000';
+
+export const getTasks = async () => {
+    const response = await fetch(`${apiUrl}/tasks`);
+    const tasks = await response.json();
+    renderTasks(tasks);
 }
 
-export const deleteBook = async (bookId, apiUrl) => {
-    await fetch(`${apiUrl}/books/${bookId}`, {
+export const deleteTask = async (taskId) => {
+    await fetch(`${apiUrl}/tasks/${taskId}`, {
         method: 'DELETE',
     });
 
-    await getBooks();
+    await getTasks();
 }
 
-export const addBook = async (e, apiUrl) => {
+export const addTask = async (e) => {
     e.preventDefault();
 
-    const title = document.querySelector('#title').value;
-    const author = document.querySelector('#author').value;
-    const year = document.querySelector('#year').value;
+    const title = document.querySelector('#task-title').value;
+    const description = document.querySelector('#task-description').value;
 
-    await fetch(`${apiUrl}/books`, {
+    await fetch(`${apiUrl}/tasks`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
             title,
-            author,
-            year,
+            description
         })
     });
 
-    await getBooks();
-    document.querySelector('#addBookForm').reset();
+    await getTasks();
+    document.querySelector('#add-task-form').reset();
 }
 
-export const editBook = async (e, apiUrl) => {
+export const editTask = async (e) => {
     e.preventDefault();
 
-    const id = document.getElementById('editId').value;
-    const title = document.getElementById('editTitle').value;
-    const author = document.getElementById('editAuthor').value;
-    const year = document.getElementById('editYear').value;
+    const id = document.getElementById('edit-task-id').value;
+    const title = document.getElementById('edit-task-title').value;
+    const description = document.getElementById('edit-task-description').value;
 
-    const updatedBook = {title, author, year};
+    const updatedTask = {title, description};
 
-    await fetch(`${apiUrl}/books/${id}`, {
+    await fetch(`${apiUrl}/tasks/${id}`, {
         method: 'PUT',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(updatedBook)
+        body: JSON.stringify(updatedTask)
     });
 
-    document.querySelector('#editModal').classList.add('hidden');
-    await getBooks();
+    document.querySelector('#edit-modal').classList.add('hidden');
+    await getTasks();
 }

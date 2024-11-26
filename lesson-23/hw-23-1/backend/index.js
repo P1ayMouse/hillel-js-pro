@@ -6,48 +6,47 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-let books = [];
+let tasks = [];
 
-app.get('/books', (req, res) => {
-    res.json(books);
+app.get('/tasks', (req, res) => {
+    res.json(tasks);
 });
 
-app.post('/books', (req, res) => {
-    const newBook = {...req.body, id: books.length + 1};
+app.post('/tasks', (req, res) => {
+    const newTask = {...req.body, id: tasks.length + 1};
 
-    books.push(newBook);
+    tasks.push(newTask);
 
-    res.status(200).json(newBook);
+    res.status(200).json(newTask);
 });
 
-app.put('/books/:id', (req, res) => {
+app.put('/tasks/:id', (req, res) => {
     const { id } = req.params;
-    const { title, author, year } = req.body;
+    const { title, description } = req.body;
 
-    const book = books.find(book => book.id === +(id));
+    const task = tasks.find(task => task.id === +(id));
 
-    if(!book) {
-        res.status(404).json({message: 'Книга не знайдена!'});
+    if(!task) {
+        res.status(404).json({message: 'Завдання не знайдено!'});
     } else {
-        book.title = title || book.title;
-        book.author = author || book.author;
-        book.year = year || book.year;
+        task.title = title || task.title;
+        task.description = description || task.description;
 
-        res.status(200).json(book);
+        res.status(200).json(task);
     }
 });
 
-app.delete('/books/:id', (req, res) => {
+app.delete('/tasks/:id', (req, res) => {
     const { id } = req.params;
 
-    const bookIndex = books.findIndex(book => book.id === +(id));
+    const taskIndex = tasks.findIndex(task => task.id === +(id));
 
-    if(bookIndex === -1) {
-        res.status(404).json({message: 'Книга не знайдена!'});
+    if(taskIndex === -1) {
+        res.status(404).json({message: 'Завдання не знайдено!'});
     } else {
-        books.splice(bookIndex, 1);
+        tasks.splice(taskIndex, 1);
 
-        res.status(200).json({message: 'Книга видалена!'});
+        res.status(200).json({message: 'Завдання видалено!'});
     }
 });
 

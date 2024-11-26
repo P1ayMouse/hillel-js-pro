@@ -44,13 +44,13 @@ form button:hover {
     background-color: #0056b3;
 }
 
-#booksList {
+#tasks-list {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.book-item {
+.task-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,7 +60,7 @@ form button:hover {
     border-radius: 4px;
 }
 
-.book-item button {
+.task-item button {
     padding: 5px 10px;
     border: none;
     background-color: #FF4136;
@@ -69,16 +69,22 @@ form button:hover {
     cursor: pointer;
 }
 
-.book-item button.edit {
+.task-item button.edit {
     background-color: #28a745;
 }
 
-.book-item button:hover {
+.task-item button:hover {
     background-color: #c11b12;
 }
 
-.book-item button.edit:hover {
+.task-item button.edit:hover {
     background-color: #218838;
+}
+
+.task-title {
+    font-weight: bold;
+    font-size: 22px;
+    padding: 30px;
 }
 
 .modal {

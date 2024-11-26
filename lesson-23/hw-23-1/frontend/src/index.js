@@ -1,13 +1,13 @@
-import {addBook, editBook, getBooks} from "./js/api.js";
+import {addTask, editTask, getTasks} from "./js/api.js";
+import {openEditModal} from "./js/dom.js";
 
-const apiUrl = 'http://localhost:3000';
-
-document.getElementById('cancelEdit').addEventListener('click', () => {
-    document.getElementById('editModal').classList.add('hidden');
+document.getElementById('cancel-edit').addEventListener('click', () => {
+    document.getElementById('edit-modal').classList.add('hidden');
 });
 
-document.querySelector('#addBookForm').addEventListener('submit',
-    (e) => addBook(e, apiUrl));
-document.querySelector('#editBookForm').addEventListener('submit',
-    (e) => editBook(e, apiUrl));
-getBooks(apiUrl);
+document.querySelector('#add-task-form').addEventListener('submit',
+    (e) => addTask(e));
+document.querySelector('#add-task-form').addEventListener('submit',
+    (e) => editTask(e));
+
+const tasks = getTasks();

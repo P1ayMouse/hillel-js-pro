@@ -12,10 +12,21 @@ export const renderTasks = (tasks) => {
             <p class="task-title">${task.title}</p>
             <p>${task.description}</p>
             <div>
-                <button class="edit" onclick="openEditModal(${task.id}, '${task.title}', '${task.description}')">Редагувати</button>
-                <button onclick="deleteTask(${task.id})">Видалити</button>
+                <button class="edit">Редагувати</button>
+                <button class="delete">Видалити</button>
             </div>
         `;
+
+        // Attach event listeners here
+        const editButton = taskItem.querySelector('.edit');
+        editButton.addEventListener('click', () => {
+            openEditModal(task.id, task.title, task.description);
+        });
+
+        const deleteButton = taskItem.querySelector('.delete');
+        deleteButton.addEventListener('click', () => {
+            deleteTask(task.id);
+        });
 
         tasksList.appendChild(taskItem);
     });

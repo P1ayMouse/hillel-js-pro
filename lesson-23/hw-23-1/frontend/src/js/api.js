@@ -41,7 +41,6 @@ export const editTask = async (e) => {
     const id = document.getElementById('edit-task-id').value;
     const title = document.getElementById('edit-task-title').value;
     const description = document.getElementById('edit-task-description').value;
-
     const updatedTask = {title, description};
 
     await fetch(`${apiUrl}/tasks/${id}`, {

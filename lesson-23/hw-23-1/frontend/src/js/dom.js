@@ -17,7 +17,6 @@ export const renderTasks = (tasks) => {
             </div>
         `;
 
-        // Attach event listeners here
         const editButton = taskItem.querySelector('.edit');
         editButton.addEventListener('click', () => {
             openEditModal(task.id, task.title, task.description);

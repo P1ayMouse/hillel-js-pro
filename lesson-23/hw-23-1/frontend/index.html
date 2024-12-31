@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO список</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>TODO список</h1>
+    <form id="add-task-form">
+        <input type="text" id="task-title" placeholder="Назва завдання" required>
+        <input type="text" id="task-description" placeholder="Завдання" required>
+        <button type="submit">Додати завдання</button>
+    </form>
+    <div id="tasks-list"></div>
+
+    <div id="edit-modal" class="modal hidden">
+        <form id="edit-task-form">
+            <h2>Редагувати Завдання</h2>
+            <input type="hidden" id="edit-task-id">
+            <input type="text" id="edit-task-title" placeholder="Назва завдання" required>
+            <input type="text" id="edit-task-description" placeholder="Завдання" required>
+            <button type="submit">Зберегти Зміни</button>
+            <button type="button" id="cancel-edit">Скасувати</button>
+        </form>
+    </div>
+</div>
+
+<script src="src/index.js" type="module"></script>
+</body>
+</html>

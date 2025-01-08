@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+}
+
+h1 {
+    color: #4CAF50;
+    margin-top: 20px;
+}
+
+.smiles-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    gap: 20px;
+    max-width: 800px;
+}
+
+.smile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.smile:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.smile span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+}
+
+.results {
+    margin: 20px auto;
+}
+
+.results button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.results button:hover {
+    background-color: #45a049;
+}
+
+.results button:active {
+    background-color: #3e8e41;
+}

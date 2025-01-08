@@ -1,5 +1,5 @@
 import React from "react";
-import './Counter.css'
+import './ClickCounter.css'
 
 class ClickCounter extends React.Component {
     constructor(props) {

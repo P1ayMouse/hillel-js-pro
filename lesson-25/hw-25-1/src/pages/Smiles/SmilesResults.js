@@ -25,6 +25,7 @@ class SmilesResults extends React.Component {
                             <img
                                 src={require('../../assets/img/' + smile.img)}
                                 alt={smile.img}
+                                key={smile.id}
                             />
                         ))}
                         <p>
@@ -33,7 +34,6 @@ class SmilesResults extends React.Component {
                     </div>
                     : null}
             </div>
-
         )
     }
 }

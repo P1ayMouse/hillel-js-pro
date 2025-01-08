@@ -19,6 +19,20 @@ class SmilesPage extends React.Component {
             results: false,
             winners: []
         }
+
+        this.state.smiles = JSON.parse(localStorage.getItem('smilesElements')) || this.state.smiles;
+    }
+
+    smilesSave = () => {
+        localStorage.setItem("smilesElements", JSON.stringify(this.state.smiles));
+    }
+
+    componentDidMount() {
+        this.smilesSave();
+    }
+
+    componentDidUpdate() {
+        this.smilesSave();
     }
 
     voteFor = (id) => {
@@ -32,7 +46,7 @@ class SmilesPage extends React.Component {
     resultsClear = () => {
         this.setState({
             smiles : this.state.smiles.map(smile => {
-                return {... smile, votes: smile.votes = 0};
+                return {...smile, votes: smile.votes = 0};
             }),
             results : false
         })

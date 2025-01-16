@@ -7,9 +7,10 @@ export default function TodoItem({todo, toggleTodo, deleteTodo}) {
     console.log(theme);
     return (
         <div className={`toDoItem toDoItem-${theme}`}
-             style={{textDecoration: todo.completed ? 'line-through' : 'none'}}
              onClick={() => toggleTodo(todo.id)}>
+            <span style={{textDecoration: todo.completed ? 'line-through' : 'none'}}>
                 {todo.task}
+            </span>
             <button
                 onClick={() => deleteTodo(todo.id)}
             >

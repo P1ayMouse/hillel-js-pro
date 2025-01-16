@@ -10,7 +10,7 @@ export default function TodoItem({ contact }) {
                 src={require(`../../assets/icons/${theme === "light" ? contact.darkIcon : contact.lightIcon}`)}
                 alt={contact.id}
             />
-            <span>{contact.description}</span>
+            <span className="contact-description">{contact.description}</span>
         </div>
     );
 }

@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .header-light {
@@ -20,9 +21,9 @@
 }
 
 .header-dark {
-    background-color: #000000;
-    color: #ffffff;
-    border-bottom: 1px solid #ffffff;
+    background-color: #292929;
+    color: #bcb6b6;
+    border-bottom: 1px solid #bcb6b6;
 }
 
 .button-theme {
@@ -32,6 +33,7 @@
     border: none;
     border-radius: 5px;
     display: block;
+    transition: color 0.8s ease;
 }
 
 .button-theme-light {
@@ -40,6 +42,6 @@
 }
 
 .button-theme-dark {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #bcb6b6;
+    color: #292929;
 }

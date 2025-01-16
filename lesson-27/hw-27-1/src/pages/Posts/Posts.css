@@ -1,0 +1,29 @@
+.postCard-light{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.postCard-dark{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(135,255,145,1);
+}
+
+.postTitle {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.postBody {
+    font-size: 14px;
+}

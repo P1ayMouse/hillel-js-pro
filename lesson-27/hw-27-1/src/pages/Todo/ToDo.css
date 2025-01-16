@@ -1,0 +1,111 @@
+h1 {
+    padding: 22px;
+    text-align: center;
+    font-size: 44px;
+}
+
+.toDoContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.toDoContainer-dark {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.toDoContainer-light {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Форма */
+.todoForm {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.todoForm input {
+    width: 300px;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.todoForm input:focus {
+    border-color: #909297;
+}
+
+.todoForm button {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #909297;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.todoForm button:hover {
+    background-color: #605c5c;
+}
+
+.toDoItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.toDoItem-light {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+}
+
+.toDoItem-dark {
+    background-color: #333;
+    border: 1px solid #555;
+    color: #fff;
+}
+
+.toDoItem:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+}
+
+.toDoItem-dark:hover {
+    background-color: #444;
+}
+
+.toDoItem button {
+    background-color: #ff4d4d;
+    border: none;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toDoItem button:hover {
+    background-color: #cc0000;
+}
+
+.emptyList {
+    padding: 60px;
+    text-align: center;
+    font-size: 22px;
+}

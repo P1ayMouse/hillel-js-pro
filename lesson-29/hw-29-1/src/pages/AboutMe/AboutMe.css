@@ -1,0 +1,40 @@
+.aboutMeContainer {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.aboutMeContainer-dark {
+    color: #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.aboutMeContainer-light {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.aboutMeContainer h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.aboutMeContainer p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-top: 10px;
+    color: inherit;
+    transition: color 0.3s ease;
+}

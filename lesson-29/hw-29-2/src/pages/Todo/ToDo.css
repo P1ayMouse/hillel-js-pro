@@ -1,0 +1,114 @@
+.toDoContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.toDoContainer-dark {
+    color: #ffffff;
+}
+
+.toDoContainer-light {
+    color: #000000;
+}
+
+.todoForm {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.todoListContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.taskField {
+    width: 300px;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.taskField:focus {
+    border-color: #909297;
+}
+
+.toDoButton {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #909297;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 150px;
+    text-align: center;
+}
+
+.toDoButton:hover {
+    background-color: #605c5c;
+}
+
+.toDoItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.toDoItem-light {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+}
+
+.toDoItem-dark {
+    background-color: #333;
+    border: 1px solid #555;
+    color: #fff;
+}
+
+.toDoItem:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+}
+
+.toDoItem-dark:hover {
+    background-color: #444;
+}
+
+.toDoItem button {
+    background-color: #ff4d4d;
+    border: none;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toDoItem button:hover {
+    background-color: #cc0000;
+}
+
+.emptyList {
+    padding: 60px;
+    text-align: center;
+    font-size: 22px;
+}

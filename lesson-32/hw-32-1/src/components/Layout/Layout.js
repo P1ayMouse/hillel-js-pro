@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {Link, NavLink, Outlet, useLocation, useNavigate} from "react-router-dom";
+import { NavLink, Outlet, useLocation, useNavigate} from "react-router-dom";
 import { ThemeContext } from "../../context/ThemeContext";
 import { logout } from "../../store/slices/userSlices";
 
@@ -123,15 +123,15 @@ export default function LayoutComponent() {
                     </Col>
                     <Col>
                         <Space size="large">
-                            <Link href="mailto:artem@ryzhenko.com" target="_blank">
+                            <a href="mailto:artem@ryzhenko.com">
                                 <MailOutlined /> Email
-                            </Link>
-                            <Link href="https://linkedin.com/in/artem-ryzhenko" target="_blank">
+                            </a>
+                            <a href="https://linkedin.com/in/artem-ryzhenko-886601172/" target="_blank" rel="noopener noreferrer">
                                 <LinkedinOutlined /> LinkedIn
-                            </Link>
-                            <Link href="https://github.com/PlayMouse" target="_blank">
+                            </a>
+                            <a href="https://github.com/P1ayMouse" target="_blank" rel="noopener noreferrer">
                                 <GithubOutlined /> GitHub
-                            </Link>
+                            </a>
                         </Space>
                     </Col>
                 </Row>

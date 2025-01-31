@@ -1,0 +1,128 @@
+@import "../../styles/variables";
+
+.resume-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+// Для відповідного тексту, що потребує зміни кольору під тему
+body.dark .resume-theme-title {
+    color: $darkTextColor;
+}
+
+// Навички
+.skill-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skill-category-card {
+  padding: 16px;
+  background: #f5f5f5;
+  border-radius: 8px;
+
+}
+
+.skill-tag {
+  font-size: 16px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-tag:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+// Навчальні центри
+.education-list-container {
+  margin-top: 40px;
+}
+
+.education-item-card {
+  width: 100%;
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.education-item-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.education-item-card a {
+  color: #1677ff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.education-item-card a:hover {
+  color: #0044cc;
+}
+
+// Контакти
+.contacts-card {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 80px;
+}
+
+.contacts-card a {
+  color: #1677ff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.contacts-card a:hover {
+  color: #0044cc;
+}
+
+// Мова володіння
+.languages-card {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.language-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.language-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1 1 auto;
+  min-width: 180px;
+  margin-bottom: 16px;
+}
+
+.language-item .ant-tag {
+}
+
+.language-item .ant-progress {
+  width: 120px;
+}
+
+

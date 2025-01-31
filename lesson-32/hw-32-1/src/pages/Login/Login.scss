@@ -1,0 +1,23 @@
+@import "../../styles/variables";
+
+.login-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+// Кнопка
+.login-button {
+    font-weight: 500;
+    height: 40px;
+    width: 80px;
+    transition: all 0.3s ease;
+    border-width: 2px;
+    cursor: pointer;
+}
+
+body.dark .login-button {
+    background-color: $darkTextColor;
+    color: $darkBackgroundColor;
+    border-color: #8f8f8f;
+}

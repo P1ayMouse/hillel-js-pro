@@ -1,0 +1,45 @@
+@import "../../styles/variables";
+
+
+// To Do список
+.todo-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.empty-list {
+    padding: 60px;
+    text-align: center;
+    font-size: 22px;
+}
+
+// To Do форма
+.form-container {
+    padding-bottom: 20px;
+}
+
+// Стрічка для введення завдання
+.task-field {
+    height: 40px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-field::placeholder {
+    color: #888;
+}
+
+// Стилі кнопки
+.add-new-task-button {
+    font-weight: 500;
+    height: 40px;
+    width: 100%;
+    transition: all 0.3s ease;
+    border-width: 2px;
+    cursor: pointer;
+}
